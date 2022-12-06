@@ -1,0 +1,20 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  frontend:
+    build: ./Frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  backend:
+    build: ./Backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=development
+      - MONGO_DB_CONNECTION_STRING=mongodb+srv://root:root@mongodb.8dj56nk.mongodb.net/?retryWrites=true&w=majority
+      - MONGO_DB_NAME=mongodb
+      - REDIS_URI=rediss://default:AVNS_CDZ-dDjPNu4ZVBepTTM@redis-24920d4b-bbckragelund-f98b.aivencloud.com:13138
+
+  

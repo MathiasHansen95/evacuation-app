@@ -1,0 +1,8 @@
+{
+    "env": {
+        "MONGO_DB_CONNECTION_STRING" : "mongodb+srv://root:root@mongodb.8dj56nk.mongodb.net/?retryWrites=true&w=majority",
+        "MONGO_DB_NAME" : "mongodb",
+        "REDIS_URI" : "rediss://default:AVNS_CDZ-dDjPNu4ZVBepTTM@redis-24920d4b-bbckragelund-f98b.aivencloud.com:13138"
+    }
+}
+
