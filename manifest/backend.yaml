@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels: 
+    app: sdu-evac-backend
+  name: sdu-evac-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sdu-evac-backend
+  template:
+    metadata:
+      labels:
+        app: sdu-evac-backend
+    spec:
+      containers:
+        - name: sdu-evac-backend
+          image: gcr.io/cloud-project-371713/backend:latest
+          ports:
+            - containerPort: 3000
+          env: 
+            - name: PORT
+              value: "3000"
+            - name: MONGO_DB_CONNECTION_STRING
+              value: mongodb+srv://root:root@mongodb.8dj56nk.mongodb.net/?retryWrites=true&w=majority
+            - name: MONGO_DB_NAME
+              value: mongodb
+            - name: REDIS_URI
+              value: rediss://default:AVNS_CDZ-dDjPNu4ZVBepTTM@redis-24920d4b-bbckragelund-f98b.aivencloud.com:13138
