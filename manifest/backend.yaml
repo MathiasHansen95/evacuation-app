@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels: 
-    app: sdu-evac-backend
-  name: sdu-evac-backend
+    app: evac-backend
+  name: evac-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sdu-evac-backend
+      app: evac-backend
   template:
     metadata:
       labels:
-        app: sdu-evac-backend
+        app: evac-backend
     spec:
       containers:
-        - name: sdu-evac-backend
+        - name: evac-backend
           image: gcr.io/cloud-project-371713/backend:latest
           ports:
             - containerPort: 3000

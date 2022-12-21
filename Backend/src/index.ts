@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'development') {
   }
 } else {
   corsOptions = {
-    origin: "https://iob.news"
+    origin: "*"
   }
 } 
 

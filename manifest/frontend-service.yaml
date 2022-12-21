@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels: 
-    app: sdu-evac-frontend
-  name: sdu-evac-frontend
+    app: evac-frontend
+  name: evac-frontend
 spec:
   ports: 
   - name: http
@@ -11,5 +11,5 @@ spec:
     protocol: TCP
     targetPort: 80
   selector: 
-    app: sdu-evac-frontend
+    app: evac-frontend
   type: LoadBalancer

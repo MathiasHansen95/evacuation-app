@@ -295,6 +295,7 @@ export const AdaptionContextProvider = (props: AdaptionContextProviderProps) => 
       const emitResult = await fetch(`${constansts.serverBaseURL}/adaptions`, {
         method: "POST",
         headers: {
+          "mode": 'no-cors',
           "Content-Type": "application/json"
         },
         body: JSON.stringify({

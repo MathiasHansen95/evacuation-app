@@ -57,6 +57,7 @@ export default class UserService {
       const response = await fetch(`${this.serverBaseURL}/connect`, {
         method: 'POST',
         headers: {
+          "mode": 'no-cors',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -81,6 +82,7 @@ export default class UserService {
       let response = await fetch(`${this.serverBaseURL}/${user_id}/video`, {
         method: 'put',
         headers: {
+          "mode": 'no-cors',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -109,6 +111,7 @@ export default class UserService {
       let response = await fetch(`${this.serverBaseURL}/${user_id}/emotions`, {
         method: 'post',
         headers: {
+          "mode": 'no-cors',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -133,6 +136,7 @@ export default class UserService {
       let response = await fetch(`${this.serverBaseURL}/${user_id}/disconnect`, {
         method: 'post',
         headers: {
+          "mode": 'no-cors',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({

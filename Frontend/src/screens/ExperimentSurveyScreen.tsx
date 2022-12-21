@@ -17,6 +17,7 @@ const ExperimentSurveyScreen = () => {
     const res = await fetch(`${constants.serverBaseURL}/surveys/scale`, {
       method: "POST",
       headers: {
+        "mode": 'no-cors',
         "Content-Type": "application/json",
         "accept": "application/json",
       },

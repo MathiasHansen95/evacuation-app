@@ -18,6 +18,7 @@ const SurveyScreen = () => {
     const res = await fetch(`${constants.serverBaseURL}/surveys/text`, {
       method: "POST",
       headers: {
+        "mode": 'no-cors',
         "Content-Type": "application/json",
         "accept": "application/json",
       },

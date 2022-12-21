@@ -8,14 +8,14 @@ spec:
   replicas: 1
   selector:
     matchLabels: 
-      app: sdu-evac-frontend
+      app: evac-frontend
   template:
     metadata:
       labels:
-        app: sdu-evac-frontend
+        app: evac-frontend
     spec:
       containers:
-      - name: sdu-evac-frontend
+      - name: evac-frontend
         image: gcr.io/cloud-project-371713/frontend:latest
         ports: 
         - containerPort: 80
