@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   labels:
-    app: sdu-evac-frontend
-  name: sdu-evac-frontend
+    app: evac-frontend
+  name: evac-frontend
 spec:
   replicas: 1
   selector:
